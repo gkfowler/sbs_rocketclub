@@ -1,0 +1,7 @@
+#Add this to the end of the existing /etc/rc.local file
+#change to the pi user's homedir
+cd /home/pi
+#run the command as the pi user, shouldn't run it as root
+su -l pi -c "./rpi-data-logger.py" 2>&1 > rpi_logger.log &
+exit 0
+
